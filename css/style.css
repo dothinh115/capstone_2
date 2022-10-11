@@ -1,0 +1,240 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "Inter", sans-serif;
+}
+
+.topHeader {
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+}
+.topHeader .topHeaderInner {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topHeader .topHeaderInner .topHeaderLogo {
+  width: 50%;
+}
+.topHeader .topHeaderInner .topHeaderLogo img {
+  width: 116px;
+  height: 32px;
+}
+.topHeader .topHeaderInner .topHeaderLink {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+.topHeader .topHeaderInner .topHeaderLink a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+}
+nav .navInner {
+  width: 80%;
+  height: inherit;
+  margin: auto;
+}
+nav .navInner ul {
+  list-style-type: none;
+  height: inherit;
+}
+nav .navInner ul li {
+  position: relative;
+  height: inherit;
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+  line-height: 50px;
+}
+nav .navInner ul li a {
+  text-decoration: none;
+  color: #000;
+  line-height: 24.2px;
+  font-size: 20px;
+  font-weight: 400;
+}
+nav .navInner ul li::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: #000;
+  height: 2px;
+  width: 100%;
+  visibility: hidden;
+}
+nav .navInner ul li.active::after {
+  visibility: visible;
+}
+
+.regForm {
+  width: 100%;
+}
+.regForm h1 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48.41px;
+  text-transform: capitalize;
+  padding: 30px 0;
+  text-align: center;
+}
+.regForm .formInner {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.regForm .formInner .formItem {
+  width: 50%;
+  padding: 0 30px 10px 30px;
+  position: relative;
+  margin-top: 20px;
+}
+.regForm .formInner .formItem::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: linear-gradient(180deg, #AE18E2 0%, rgba(0, 0, 0, 0) 100%);
+  width: calc(100% - 60px);
+  height: 5px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.regForm .formInner .formItem:nth-of-type(6) {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 0;
+}
+.regForm .formInner .formItem:nth-of-type(6)::after {
+  display: none;
+}
+.regForm .formInner .formItem .formItemInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.regForm .formInner .formItem .formItemInner input {
+  width: 100%;
+  height: 36px;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 25px;
+  font-weight: 400;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.regForm .formInner .formItem .formItemInner input::-moz-placeholder {
+  color: #ccc;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 36.31px;
+}
+.regForm .formInner .formItem .formItemInner input:-ms-input-placeholder {
+  color: #ccc;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 36.31px;
+}
+.regForm .formInner .formItem .formItemInner input::placeholder {
+  color: #ccc;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 36.31px;
+}
+.regForm .formInner .formItem .formItemInner.formCheckBox::after {
+  display: none;
+}
+.regForm .formInner .formItem .formItemInner.formCheckBox span {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36.31px;
+  text-align: left;
+  color: #000;
+}
+.regForm .formInner .formItem .formItemInner.formCheckBox .specialCheckBox {
+  display: block;
+  padding-left: 35px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  margin: 0 15px;
+  line-height: 30px;
+}
+.regForm .formInner .formItem .formItemInner.formCheckBox .specialCheckBox span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+}
+.regForm .formInner .formItem .formItemInner.formCheckBox .specialCheckBox span::after {
+  position: absolute;
+  content: "";
+  display: none;
+  height: 24px;
+  width: 24px;
+  top: 3px;
+  left: 3px;
+  background-color: #AE18E2;
+  border: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+.regForm .formInner .formItem .formItemInner.formCheckBox .specialCheckBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.regForm .formInner .formItem .formItemInner.formCheckBox .specialCheckBox input:checked ~ span::after {
+  display: block;
+}
+.regForm .formInner .formItem .formItemInner .error {
+  width: 100%;
+  color: red;
+  font-size: 13px;
+  font-weight: 300;
+}
+.regForm .RegFormButton {
+  width: 50%;
+  padding: 30px;
+}
+.regForm .RegFormButton button {
+  background-color: #AE18E2;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.regForm .RegFormButton button:disabled {
+  background-color: #eee;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

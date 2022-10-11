@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONT  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FONTAWESOME  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- MY STYLE  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Register</title>
+</head>
+<body>
+    <header>
+        <div class="topHeader">
+            <div class="topHeaderInner">
+                <div class="topHeaderLogo">
+                    <a href="/index.html">
+                        <img src="./img/image 3.png" alt="">
+                    </a>
+                </div>
+                <div class="topHeaderLink">
+                    <a href="/cart.html">
+                        <img src="./img/image 8.png" alt="">
+                    </a>
+                    <span>
+                        (0)
+                    </span>
+                    <a href="/login.html">
+                        Login
+                    </a>
+                    <a href="/register.html">
+                        Register
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="navInner">
+                <ul>
+                    <li class="active">
+                        <a href="/index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Men
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Woman
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Sport
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="regForm">
+        <h1>
+            register
+        </h1>
+        <form class="formInner">
+            <div class="formItem">
+                <div class="formItemInner">
+                    <input type="email" placeholder="email" id="email" autocomplete="off">
+                    <div class="error" id="emailError"></div>
+                </div>
+            </div>
+            <div class="formItem">
+                <div class="formItemInner">
+                    <input type="text" placeholder="name" id="name" autocomplete="off">
+                    <div class="error" id="nameError"></div>
+                </div>
+            </div>
+            <div class="formItem">
+                <div class="formItemInner">
+                    <input type="password" placeholder="password" id="password" autocomplete="off">
+                    <div class="error" id="passwordError"></div>
+                </div>
+            </div>
+            <div class="formItem">
+                <div class="formItemInner">
+                    <input type="number" placeholder="phone" id="phone" autocomplete="off">
+                    <div class="error" id="phoneError"></div>
+                </div>
+            </div>
+            <div class="formItem">
+                <div class="formItemInner">
+                    <input type="password" placeholder="password confirm" id="confirm">
+                    <div class="error" id="confirmError"></div>
+                </div>
+            </div>
+            <div class="formItem">
+                <div class="formItemInner formCheckBox">
+                    <span>
+                        Gender
+                    </span>
+                    
+                    <label class="specialCheckBox" for="male" onclick="myFunc(this);">
+                        <input checked type="checkbox" value="true" id="male">
+                        <span></span>
+                        Male
+                    </label>
+                    
+                    <label class="specialCheckBox" for="female" onclick="myFunc(this);">
+                        <input type="checkbox" value="false" id="female">
+                        <span></span>
+                        Female
+                    </label>
+                </div>
+            </div>
+            <div style="width:50%"></div>
+            <div class="RegFormButton">
+                <button disabled>Submit</button>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <img src="./img/image 89.png" alt="" width="100%">
+    </footer>
+    <script src="./js/models/class.js"></script>
+    <script src="./js/models/validation.js"></script>
+    <script src="./js/controller/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

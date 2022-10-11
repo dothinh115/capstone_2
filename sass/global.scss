@@ -1,0 +1,18 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $white-color;
+    color: $black-color;
+    font-family: 'Inter', sans-serif;
+}
+
+@mixin font-set ($size, $weight) {
+    font: {
+        size: $size;
+        weight: $weight;
+    } 
+}
