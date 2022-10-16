@@ -10,6 +10,87 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+button {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24.2px;
+  background-color: #F8B653;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.featureItem .itemInner .detail h3 {
+  position: relative;
+}
+.featureItem .itemInner .detail h3 .tooltiptext {
+  visibility: hidden;
+  min-width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 105%;
+  left: 0;
+  transition: 0.5s;
+  opacity: 0;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 5px;
+  z-index: 1;
+}
+.featureItem .itemInner .detail h3 .tooltiptext::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  border: 8px solid;
+  border-color: #000 transparent transparent transparent;
+}
+.featureItem .itemInner .detail h3:hover .tooltiptext {
+  opacity: 1;
+  visibility: visible;
+}
+.featureItem .itemInner .detail p {
+  position: relative;
+}
+.featureItem .itemInner .detail p .tooltiptext {
+  visibility: hidden;
+  min-width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  top: 105%;
+  left: 0;
+  transition: 0.5s;
+  opacity: 0;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 5px;
+  z-index: 1;
+}
+.featureItem .itemInner .detail p .tooltiptext::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100%;
+  border: 8px solid;
+  border-color: transparent transparent #000 transparent;
+}
+.featureItem .itemInner .detail p:hover .tooltiptext {
+  opacity: 1;
+  visibility: visible;
+}
+
 .topHeader {
   width: 100%;
   height: 50px;
@@ -85,6 +166,156 @@ nav .navInner ul li::after {
 }
 nav .navInner ul li.active::after {
   visibility: visible;
+}
+
+.carousel .carouselContainer {
+  width: 100%;
+  position: relative;
+  background-image: url(../img/image\ 6.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  height: 550px;
+}
+.carousel .carouselContainer .owl-carousel {
+  width: 80%;
+  margin: auto;
+  position: static;
+}
+.carousel .carouselContainer .owl-carousel .itemInner {
+  position: relative;
+}
+.carousel .carouselContainer .owl-carousel .itemInner img {
+  width: 100%;
+  transform: scale(80%);
+}
+.carousel .carouselContainer .owl-carousel .itemInner .itemDetail {
+  position: absolute;
+  display: block;
+  top: 20%;
+  transform: translateY(50%);
+  right: 0;
+}
+.carousel .carouselContainer .owl-carousel .itemInner .itemDetail h1 {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 48.41px;
+}
+.carousel .carouselContainer .owl-carousel .itemInner .itemDetail p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24.2px;
+}
+.carousel .carouselContainer .owl-carousel .itemInner .itemDetail button {
+  width: 150px;
+  height: 50px;
+  margin-top: 10px;
+}
+.carousel .carouselContainer .owl-nav {
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(50%);
+  left: 0;
+  width: 100%;
+}
+.carousel .carouselContainer .owl-nav button {
+  width: 66.13px;
+  height: 45.71px;
+  font-size: 0;
+}
+.carousel .carouselContainer .owl-nav button.owl-prev {
+  position: absolute;
+  display: block;
+  left: 54px;
+  top: 0;
+  background-image: url(../img/Polygon\ 2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.carousel .carouselContainer .owl-nav button.owl-next {
+  position: absolute;
+  display: block;
+  right: 54px;
+  top: 0;
+  background-image: url(../img/Polygon\ 1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.carousel .carouselContainer .owl-nav button:hover {
+  background-color: unset;
+}
+
+.feature {
+  width: 90%;
+  margin: auto;
+  padding: 30px 0;
+}
+.feature h1 {
+  text-align: center;
+}
+.feature .featureContainer {
+  padding-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.feature .featureContainer .featureItem {
+  width: 33%;
+  padding: 33.5px;
+}
+.feature .featureContainer .featureItem .itemInner {
+  background-color: #F8F8F8;
+}
+.feature .featureContainer .featureItem .itemInner:hover .topImg img {
+  transform: scale(110%);
+}
+.feature .featureContainer .featureItem .itemInner .topImg {
+  padding: 0 20px;
+  text-align: center;
+}
+.feature .featureContainer .featureItem .itemInner .topImg img {
+  transition: 0.5s;
+  width: 100%;
+}
+.feature .featureContainer .featureItem .itemInner .detail {
+  padding: 0 20px;
+}
+.feature .featureContainer .featureItem .itemInner .detail h3 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.05px;
+}
+.feature .featureContainer .featureItem .itemInner .detail p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24.2px;
+  color: #CBC9C9;
+  margin: 8px 0;
+}
+.feature .featureContainer .featureItem .itemInner .footer {
+  display: flex;
+  line-height: 64px;
+}
+.feature .featureContainer .featureItem .itemInner .footer a {
+  width: 50%;
+  height: 64px;
+  font-size: 24px;
+  font-weight: 200;
+  color: #000;
+  background-color: #F8B653;
+  text-decoration: none;
+  text-align: center;
+}
+.feature .featureContainer .featureItem .itemInner .footer span {
+  background-color: #DEDDDC;
+  width: 50%;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  text-align: right;
+  padding-right: 30px;
 }
 
 .regForm {

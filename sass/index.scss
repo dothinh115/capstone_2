@@ -1,0 +1,147 @@
+.carousel {
+    .carouselContainer {
+        width: 100%;
+        position: relative;
+        background-image: url(../img/image\ 6.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center bottom;
+        height: 550px;
+        .owl-carousel {
+            width: 80%;
+            margin: auto;
+            position: static;
+            .itemInner {
+                position: relative;
+                img {
+                    width: 100%;
+                    transform: scale(80%);
+                }
+                .itemDetail {
+                    position: absolute;
+                    display: block;
+                    top: 20%;
+                    transform: translateY(50%);
+                    right: 0;
+                    h1 {
+                        @include font-set(40px, 300);
+                        line-height: 48.41px;
+                    }
+                    p {
+                        @include font-set(20px, 300);
+                        line-height: 24.2px;
+                    }
+                    button {
+                        width: 150px;
+                        height: 50px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        .owl-nav {
+            position: absolute;
+            display: block;
+            top: 50%;
+            transform: translateY(50%);
+            left: 0;
+            width: 100%;
+            button {
+                width: 66.13px;
+                height: 45.71px;
+                font-size: 0;
+                &.owl-prev {
+                    position: absolute;
+                    display: block;
+                    left: 54px;
+                    top: 0;
+                    background-image: url(../img/Polygon\ 2.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+                &.owl-next {
+                    position: absolute;
+                    display: block;
+                    right: 54px;
+                    top: 0;
+                    background-image: url(../img/Polygon\ 1.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+                &:hover {
+                    background-color: unset;
+                }
+            }
+        }
+    }
+}
+
+.feature {
+    width: 90%;
+    margin: auto;
+    padding: 30px 0;
+    h1 {
+        text-align: center;
+    }
+    .featureContainer {
+        padding-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        .featureItem {
+            width: 33%;
+            padding: 33.5px;
+            .itemInner {
+                background-color: $feature-color;
+                &:hover {
+                    .topImg img {
+                        transform: scale(110%);
+                    }
+                }
+                .topImg {
+                    padding: 0 20px;
+                    text-align: center;
+                    img {
+                        transition: .5s;
+                        width: 100%;
+                    }
+                }
+                .detail {
+                    padding: 0 20px;
+                    h3 {
+                        @include font-set(24px, 300);
+                        line-height: 29.05px;
+                    }
+                    p {
+                        @include font-set(20px, 300);
+                        line-height: 24.2px;
+                        color: $short-des-color;
+                        margin: 8px 0;
+                    }
+                }
+                .footer {
+                    display: flex;
+                    line-height: 64px;
+                    a {
+                        width: 50%;
+                        height: 64px;
+                        @include font-set(24px, 200);
+                        color: $black-color;
+                        background-color: $button-background;
+                        text-decoration: none;
+                        text-align: center;
+                    }
+                    span {
+                        background-color: $price-background;
+                        width: 50%;
+                        @include font-set(24px, 600);
+                        color: $black-color;
+                        text-align: right;
+                        padding-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

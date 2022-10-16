@@ -1,0 +1,20 @@
+.carousel .carouselContainer {
+  width: 100%;
+}
+.carousel .carouselContainer .owl-carousel {
+  width: 80%;
+  margin: auto;
+}
+.carousel .carouselContainer .owl-carousel .itemInner {
+  position: relative;
+}
+.carousel .carouselContainer .owl-carousel .itemInner img {
+  width: 100%;
+}
+.carousel .carouselContainer .owl-carousel .itemInner .itemDetail {
+  position: absolute;
+  display: block;
+  top: 40%;
+  transform: translateY(50%);
+  right: 0;
+}/*# sourceMappingURL=index.css.map */
