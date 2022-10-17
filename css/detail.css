@@ -1,1 +1,18 @@
-/*# sourceMappingURL=detail.css.map */
+.mainProduct {
+  width: 80%;
+  margin: auto;
+}
+.mainProduct .productContainer {
+  display: flex;
+  gap: 20px;
+}
+.mainProduct .productContainer .mainImg {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.mainProduct .productContainer .productDetail {
+  flex: 7;
+}/*# sourceMappingURL=detail.css.map */

@@ -58,7 +58,7 @@ function getInfo () {
         
     
     if(isValid) {
-        button.removeAttribute("disabled");
+        button.disabled = false;
         var user = new User();
         user.email = email;
         user.password = password;
@@ -68,7 +68,7 @@ function getInfo () {
         return user;
     }
     else {
-        button.setAttribute("disabled", "disabled");
+        button.disabled = true;
     }
 }
 
@@ -83,7 +83,7 @@ document.querySelector(".RegFormButton button").addEventListener("click", functi
         alert(result.data.message);
     });
     promise.catch(function(err) {
-        alert(err.response.data.message);
+        showErr("emailError", err.response.data.message);
     });
     event.preventDefault();
 });
@@ -95,7 +95,9 @@ function showErr (id, message) {
 //CHECKVALID REAL TIME
 function checkValid () {
     var input = document.querySelectorAll(".formItemInner input");
-    input.forEach(function(item){
-        item.setAttribute("onkeyup", "getInfo();");
+    input.forEach((item) => {
+        item.addEventListener("keyup", () => {
+            getInfo();
+        });
     });
 }
